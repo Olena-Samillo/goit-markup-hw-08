@@ -1,0 +1,26 @@
+.visually-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.portfolio {
+  padding: 94px 0;
+}
+
+.portfolio-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-navigation-menu {
+  display: flex;
+}
+
+.portfolio-navigation-list:not(:last-child) {
+  margin-right: 8px;
+}
+
+.navigation-list .current {
+  color: $primary-active-color;
+}

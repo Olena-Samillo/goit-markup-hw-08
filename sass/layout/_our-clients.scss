@@ -1,0 +1,40 @@
+.our-clients-header {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primary-heading-color;
+  margin-bottom: 50px;
+}
+
+.our-clients-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #afb1b8;
+
+  @include transition;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #2196f3;
+    color: #2196f3;
+  }
+}
+
+.our-clients-icon {
+  fill: currentColor;
+}

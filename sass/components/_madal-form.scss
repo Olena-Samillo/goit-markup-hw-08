@@ -1,0 +1,165 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  @include transition;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  min-height: 581px;
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @include transition;
+}
+
+.modal-form {
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-madal-form {
+  margin-bottom: 12px;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+
+  @include transition;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $background-btn-hero;
+  }
+
+  &:focus + .madal-form-input-icon,
+  &:hover + .madal-form-input-icon {
+    fill: $background-btn-hero;
+  }
+}
+
+.modal-form-input:focus,
+.madal-form-field textarea:focus,
+.modal-form-input:hover,
+.madal-form-field textarea:hover {
+  outline: none;
+  border-color: $primary-active-color;
+}
+
+.madal-form-field {
+  font-family: $main-font;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: $primary-text-color;
+  margin-bottom: 10px;
+}
+
+.modal-form-input-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+
+.madal-form-input-icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+
+  @include transition;
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-top: 4px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  @include transition;
+}
+
+.modal-form-message::placeholder {
+  font-family: $main-font;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+
+  &:focus {
+    outline: none;
+    border: 1px solid #2196f3;
+  }
+}
+
+.modal-form-check-text {
+  font-family: $main-font;
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-bottom: 30px;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+
+  a {
+    text-decoration: underline;
+    color: #188ce8;
+  }
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-right: 9px;
+    margin-left: 10px;
+  }
+}
+
+.modal-form-check:checked + .modal-form-check-text::before {
+  background: #2196f3;
+  border-radius: 2px;
+  border: none;
+  background-image: url('../images/sprite/Check.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

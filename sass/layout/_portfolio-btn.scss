@@ -1,0 +1,23 @@
+.portfolio-btn {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primary-heading-color;
+  cursor: pointer;
+  border: none;
+  padding: 6px 22px;
+  outline: none;
+  background: $background-color-btn;
+  border-radius: 4px;
+
+  @include transition;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $background-btn-hero;
+  }
+}

@@ -1,0 +1,94 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  .container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+  }
+
+  .navigation-list:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .contacts-list:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.navigation-link {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.333;
+  letter-spacing: 0.02em;
+  color: $primary-heading-color;
+
+  @include transition;
+
+  &.current::before {
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-active-color;
+  }
+
+  &::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -32px;
+    width: 100%;
+    height: 4px;
+    background-color: #2196f3;
+    border-radius: 2px;
+    opacity: 0;
+  }
+}
+
+.contacts-link {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+
+  @include transition;
+
+  &:hover,
+  &:focus {
+    color: $primary-active-color;
+  }
+}
+
+.navigation-list {
+  position: relative;
+}
+
+.navigation-header {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-menu {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.icon-contacts {
+  margin-right: 10px;
+  fill: currentColor;
+}

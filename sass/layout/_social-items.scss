@@ -1,0 +1,28 @@
+.social-team-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  color: rgb(175, 177, 184);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  @include transition;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $background-icon;
+  }
+}
+
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentcolor;
+}
